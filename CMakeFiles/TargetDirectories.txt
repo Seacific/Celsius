@@ -1,3 +1,0 @@
-/Users/sea/dev/SDLRaycasting/CMakeFiles/RaycastEngine.dir
-/Users/sea/dev/SDLRaycasting/CMakeFiles/edit_cache.dir
-/Users/sea/dev/SDLRaycasting/CMakeFiles/rebuild_cache.dir

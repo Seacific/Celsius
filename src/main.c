@@ -23,8 +23,12 @@ bool quit = false;
 void drawRectangle(SDL_Surface* surface, vec2 pos, u32 width, u32 height);
 
 void drawPixel(SDL_Surface* surface, ivec2 A);
-void drawTriangle(SDL_Surface* surface, ivec2 A, ivec2 B, ivec2 C);
+void drawTriangle(SDL_Surface* surface, vec3* vertices, int X, int Y);
 void tracePixels(SDL_Surface* surface);
+
+vec3* calculateNormalizedRayVectors();
+
+vec3* normVectors;
 
 int main(int argc, char* args[]){
 
@@ -44,11 +48,12 @@ int main(int argc, char* args[]){
 	SDL_Surface* surface = SDL_GetWindowSurface(window);
 
 	vec3 vertices[3] = {
-		{-0.5f, -0.5f, 0.0f},
-		{0.0f, 0.5f, 0.0f},
-		{0.5f, -0.5f, 0.0f}
+		{-0.5f, -0.5f, 3.0f},
+		{0.0f, 0.5f, 3.0f},
+		{0.5f, -0.5f, 3.0f}
 	};
 
+    vec3* normVectors = calculateNormalizedRayVectors();
 
 	while (!quit) {
 		
@@ -67,74 +72,28 @@ int main(int argc, char* args[]){
 
 }
 
-void drawTriangle(SDL_Surface* surface, ivec2 A, ivec2 B, ivec2 C) {
-
-	float w1;
-	float w2;
-
-	int Ax = A[0];
-	int Ay = A[1];
-
-	int Bx = B[0];
-	int By = B[1];
-
-	int Cx = C[0];
-	int Cy = C[1];
-
-	for (int currentPixelY = 0; currentPixelY < HEIGHT; currentPixelY++) {
-		for (int currentPixelX = 0; currentPixelX < WIDTH; currentPixelX++) {
-
-			w1 = (Ax*(Cy-Ay)+(currentPixelY-Ay)*(Cx-Ax)-currentPixelX*(Cy-Ay))/((By-Ay)*(Cx-Ax)-(Bx-Ax)*(Cy-Ay));
-			w2 = (currentPixelY-Ay-w1*(By-Ay))/(Cy-Ay);
-			
-			printf("%f ", w1);
-			printf("%f\n", w2);
-			
-			if (w1 > 0 && w2 > 0 && w1 + w2 < 1) {
-				drawPixel(surface, (ivec2){currentPixelX, currentPixelY});
-				printf("Drawing Pixel");
-			}
-		}
-	}
-}
-
 void tracePixels(SDL_Surface* surface) {
     for (int X = 0; X < WIDTH; X++) {
         for (int Y = 0; Y < HEIGHT; Y++) {
-            f64 theta = atan((WIDTH/2)-X);
-            f64 phi = atan((HEIGHT/2)-Y);
-            printf("%f %f \n", theta, phi);
-            if (theta > 0 && phi < 0) {
-                drawPixel(surface, (ivec2){X, Y});
-            }
+            
         }
     }
 }
+void drawTriangle(SDL_Surface* surface, vec3* vertices, int X, int Y) {
+   vec3 AB, AC, n;
+   glm_vec3_sub(vertices[0], vertices[1], AB);
+   glm_vec3_sub(vertices[0], vertices[2], AC);
 
-/*
-void DEBUG_Weight(ivec2 A, ivec2 B, ivec2 C) {
+   glm_vec3_crossn(AB, AC, n);
+   
+   int d = glm_vec3_dot(n, vertices[0]);
 
-	float w1;
-	float w2;
+   vec3 D;
 
-	int Ax = A[0];
-	int Ay = A[1];
+   memcpy(&D, normVectors[X*Y], sizeof(vec3));
 
-	int Bx = B[0];
-	int By = B[1];
-
-	int Cx = C[0];
-	int Cy = C[1];
-
-	int currentPixelX = 
-
-
-	w1 = (Ax*(Cy-Ay)+(currentPixelY-Ay)*(Cx-Ax)-currentPixelX*(Cy-Ay))/((By-Ay)*(Cx-Ax)-(Bx-Ax)*(Cy-Ay));
-	w2 = (currentPixelY-Ay-w1*(By-Ay))/(Cy-Ay);
-
-	print
 }
-*/
+
 void drawPixel(SDL_Surface* surface, ivec2 A) {
 
 		((u32*)surface->pixels)[A[0]+ WIDTH*A[1]] = 0xFFFFFFFF;
@@ -144,22 +103,17 @@ u32* getPixel(SDL_Surface* surface, ivec2 A) {
     return ((u32*)surface->pixels + (A[0]+WIDTH*A[1]));
 }
 
-
-void drawRectangle(SDL_Surface* surface, vec2 pos, u32 width, u32 height) {
-
-	if (width + (u32)(pos[0]*WIDTH) > WIDTH){
-		width = WIDTH-width;
-	}
-
-	if (height - (u32)(pos[1]*HEIGHT) <= 0) {
-		height = (u32)(pos[1]*HEIGHT) - HEIGHT;
-	}
-
-	for (int row  = 0; row < height; row++){
-		for(int column = 0; column < width; column++){
-			((u32*)surface->pixels)[column + WIDTH*row + (u32)(pos[0]*WIDTH)+(u32)(pos[1]*HEIGHT)*WIDTH] = 0xffffaaaa;
-		}
-	}
+vec3* calculateNormalizedRayVectors() {
+     vec3* table = malloc(sizeof(vec3)*WIDTH*HEIGHT);
+     for (int Y = 0; Y < HEIGHT; Y++) {
+        for (int X = 0; X < WIDTH; X++) {
+            table[X+Y][0] = X-(WIDTH/2);
+            table[X+Y][1] = Y-(HEIGHT/2);
+            table[X+Y][2] = 1;
+        }
+     }
+     for (int i = 0; i < WIDTH*HEIGHT; i++) {
+        glm_normalize(table[i]);
+     }
+     return table;
 }
-
-
