@@ -24,6 +24,7 @@ void drawRectangle(SDL_Surface* surface, vec2 pos, u32 width, u32 height);
 
 void drawPixel(SDL_Surface* surface, ivec2 A);
 void drawTriangle(SDL_Surface* surface, ivec2 A, ivec2 B, ivec2 C);
+void tracePixels(SDL_Surface* surface);
 
 int main(int argc, char* args[]){
 
@@ -51,7 +52,7 @@ int main(int argc, char* args[]){
 
 	while (!quit) {
 		
-		drawTriangle(surface, (ivec2){200, 300}, (ivec2){400, 100}, (ivec2){450, 250});
+        tracePixels(surface);
 
 		SDL_UpdateWindowSurface(window); SDL_Event e;
 		
@@ -98,7 +99,16 @@ void drawTriangle(SDL_Surface* surface, ivec2 A, ivec2 B, ivec2 C) {
 }
 
 void tracePixels(SDL_Surface* surface) {
-    for (
+    for (int X = 0; X < WIDTH; X++) {
+        for (int Y = 0; Y < HEIGHT; Y++) {
+            f64 theta = atan((WIDTH/2)-X);
+            f64 phi = atan((HEIGHT/2)-Y);
+            printf("%f %f \n", theta, phi);
+            if (theta > 0 && phi < 0) {
+                drawPixel(surface, (ivec2){X, Y});
+            }
+        }
+    }
 }
 
 /*

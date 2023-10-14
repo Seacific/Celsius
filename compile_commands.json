@@ -1,7 +1,7 @@
 [
 {
-  "directory": "/Users/sea/dev/SDLRaycasting",
-  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/sea/dev/SDLRaycasting/include -I/Users/sea/dev/SDLRaycasting/Dependencies/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -o CMakeFiles/RaycastEngine.dir/src/main.c.o -c /Users/sea/dev/SDLRaycasting/src/main.c",
+  "directory": "/Users/sea/dev/SDLRaycaster",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/sea/dev/SDLRaycaster/include -I/Users/sea/dev/SDLRaycaster/Dependencies/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -o CMakeFiles/RaycastEngine.dir/src/main.c.o -c /Users/sea/dev/SDLRaycaster/src/main.c",
   "file": "/Users/sea/dev/SDLRaycasting/src/main.c"
 }
 ]
