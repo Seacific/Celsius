@@ -81,12 +81,20 @@ clean: CMakeFiles/SDLRaycaster.dir/clean
 CMakeFiles/SDLRaycaster.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDLRaycaster.dir/build.make CMakeFiles/SDLRaycaster.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDLRaycaster.dir/build.make CMakeFiles/SDLRaycaster.dir/build
+<<<<<<< Updated upstream
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/sea/dev/SDLRaycaster/CMakeFiles --progress-num=1,2 "Built target SDLRaycaster"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/sea/dev/SDLRaycaster/CMakeFiles --progress-num=1,2,3,4 "Built target SDLRaycaster"
+>>>>>>> Stashed changes
 .PHONY : CMakeFiles/SDLRaycaster.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SDLRaycaster.dir/rule: cmake_check_build_system
+<<<<<<< Updated upstream
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sea/dev/SDLRaycaster/CMakeFiles 2
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sea/dev/SDLRaycaster/CMakeFiles 4
+>>>>>>> Stashed changes
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SDLRaycaster.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sea/dev/SDLRaycaster/CMakeFiles 0
 .PHONY : CMakeFiles/SDLRaycaster.dir/rule

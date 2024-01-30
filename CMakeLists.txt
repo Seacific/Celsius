@@ -7,6 +7,8 @@ project(SDLRaycaster)
 add_executable(
     SDLRaycaster
     src/main.c
+    src/renderer/camera.c
+    src/renderer/renderer.c
 	)
 
 target_include_directories(

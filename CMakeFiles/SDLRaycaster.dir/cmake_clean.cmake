@@ -1,6 +1,13 @@
 file(REMOVE_RECURSE
   "CMakeFiles/SDLRaycaster.dir/src/main.c.o"
   "CMakeFiles/SDLRaycaster.dir/src/main.c.o.d"
+<<<<<<< Updated upstream
+=======
+  "CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.o"
+  "CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.o.d"
+  "CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.o"
+  "CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.o.d"
+>>>>>>> Stashed changes
   "SDLRaycaster"
   "SDLRaycaster.pdb"
 )

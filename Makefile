@@ -153,6 +153,57 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDLRaycaster.dir/build.make CMakeFiles/SDLRaycaster.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+<<<<<<< Updated upstream
+=======
+src/renderer/camera.o: src/renderer/camera.c.o
+.PHONY : src/renderer/camera.o
+
+# target to build an object file
+src/renderer/camera.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDLRaycaster.dir/build.make CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.o
+.PHONY : src/renderer/camera.c.o
+
+src/renderer/camera.i: src/renderer/camera.c.i
+.PHONY : src/renderer/camera.i
+
+# target to preprocess a source file
+src/renderer/camera.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDLRaycaster.dir/build.make CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.i
+.PHONY : src/renderer/camera.c.i
+
+src/renderer/camera.s: src/renderer/camera.c.s
+.PHONY : src/renderer/camera.s
+
+# target to generate assembly for a file
+src/renderer/camera.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDLRaycaster.dir/build.make CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.s
+.PHONY : src/renderer/camera.c.s
+
+src/renderer/renderer.o: src/renderer/renderer.c.o
+.PHONY : src/renderer/renderer.o
+
+# target to build an object file
+src/renderer/renderer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDLRaycaster.dir/build.make CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.o
+.PHONY : src/renderer/renderer.c.o
+
+src/renderer/renderer.i: src/renderer/renderer.c.i
+.PHONY : src/renderer/renderer.i
+
+# target to preprocess a source file
+src/renderer/renderer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDLRaycaster.dir/build.make CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.i
+.PHONY : src/renderer/renderer.c.i
+
+src/renderer/renderer.s: src/renderer/renderer.c.s
+.PHONY : src/renderer/renderer.s
+
+# target to generate assembly for a file
+src/renderer/renderer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDLRaycaster.dir/build.make CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.s
+.PHONY : src/renderer/renderer.c.s
+
+>>>>>>> Stashed changes
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +216,15 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+<<<<<<< Updated upstream
+=======
+	@echo "... src/renderer/camera.o"
+	@echo "... src/renderer/camera.i"
+	@echo "... src/renderer/camera.s"
+	@echo "... src/renderer/renderer.o"
+	@echo "... src/renderer/renderer.i"
+	@echo "... src/renderer/renderer.s"
+>>>>>>> Stashed changes
 .PHONY : help
 
 

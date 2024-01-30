@@ -83,19 +83,64 @@ CMakeFiles/SDLRaycaster.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/SDLRaycaster.dir/src/main.c.s"
 	/usr/local/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sea/dev/SDLRaycaster/src/main.c -o CMakeFiles/SDLRaycaster.dir/src/main.c.s
 
+<<<<<<< Updated upstream
 # Object files for target SDLRaycaster
 SDLRaycaster_OBJECTS = \
 "CMakeFiles/SDLRaycaster.dir/src/main.c.o"
+=======
+CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.o: CMakeFiles/SDLRaycaster.dir/flags.make
+CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.o: src/renderer/camera.c
+CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.o: CMakeFiles/SDLRaycaster.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sea/dev/SDLRaycaster/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.o"
+	/usr/local/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.o -MF CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.o.d -o CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.o -c /Users/sea/dev/SDLRaycaster/src/renderer/camera.c
+
+CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.i"
+	/usr/local/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/sea/dev/SDLRaycaster/src/renderer/camera.c > CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.i
+
+CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.s"
+	/usr/local/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sea/dev/SDLRaycaster/src/renderer/camera.c -o CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.s
+
+CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.o: CMakeFiles/SDLRaycaster.dir/flags.make
+CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.o: src/renderer/renderer.c
+CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.o: CMakeFiles/SDLRaycaster.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sea/dev/SDLRaycaster/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.o"
+	/usr/local/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.o -MF CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.o.d -o CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.o -c /Users/sea/dev/SDLRaycaster/src/renderer/renderer.c
+
+CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.i"
+	/usr/local/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/sea/dev/SDLRaycaster/src/renderer/renderer.c > CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.i
+
+CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.s"
+	/usr/local/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sea/dev/SDLRaycaster/src/renderer/renderer.c -o CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.s
+
+# Object files for target SDLRaycaster
+SDLRaycaster_OBJECTS = \
+"CMakeFiles/SDLRaycaster.dir/src/main.c.o" \
+"CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.o" \
+"CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.o"
+>>>>>>> Stashed changes
 
 # External object files for target SDLRaycaster
 SDLRaycaster_EXTERNAL_OBJECTS =
 
 SDLRaycaster: CMakeFiles/SDLRaycaster.dir/src/main.c.o
+<<<<<<< Updated upstream
+=======
+SDLRaycaster: CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.o
+SDLRaycaster: CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.o
+>>>>>>> Stashed changes
 SDLRaycaster: CMakeFiles/SDLRaycaster.dir/build.make
 SDLRaycaster: /opt/homebrew/Cellar/sdl2/2.28.5/lib/libSDL2.dylib
 SDLRaycaster: /opt/homebrew/Cellar/sdl2/2.28.5/lib/libSDL2.a
 SDLRaycaster: CMakeFiles/SDLRaycaster.dir/link.txt
+<<<<<<< Updated upstream
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/sea/dev/SDLRaycaster/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable SDLRaycaster"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/sea/dev/SDLRaycaster/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable SDLRaycaster"
+>>>>>>> Stashed changes
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SDLRaycaster.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
