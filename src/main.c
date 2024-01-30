@@ -153,7 +153,7 @@ float isIntersectingTriangle(Celsius_Renderer* renderer, vec3* vertices, int X, 
         return 0;
    }
 
-   return 1;
+   return glm_vec3_distance(renderer->camera->position, Q);
 }
 
 void drawPixel(SDL_Surface* surface, ivec2 A) {
