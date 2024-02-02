@@ -1,4 +1,0 @@
-/Users/sea/dev/SDLRaycaster/CMakeFiles/Celsius.dir
-/Users/sea/dev/SDLRaycaster/CMakeFiles/SDLRaycaster.dir
-/Users/sea/dev/SDLRaycaster/CMakeFiles/edit_cache.dir
-/Users/sea/dev/SDLRaycaster/CMakeFiles/rebuild_cache.dir

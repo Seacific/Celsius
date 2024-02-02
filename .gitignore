@@ -8,4 +8,10 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
-
+/CMakeFiles
+libCelsius.a
+Makefile
+debug.out
+compile_commands.json
+CMakeCache.txt
+cmake_install.cmake
