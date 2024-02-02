@@ -14,18 +14,22 @@ typedef int16_t  i16;
 typedef int32_t  i32;
 typedef int64_t  i64;
 
-
 typedef struct {
-    SDL_Surface* surface;
-    Celsius_Camera* camera;
-    int width;
-    int height;
+  SDL_Surface* surface;
+  Celsius_Camera* camera;
+  int width;
+  int height;
+  u32* buffer;
+  u32 pitch;
 } Celsius_Renderer; 
 
-Celsius_Renderer* Celsius_CreateRenderer(SDL_Window* window, Celsius_Camera* camera, int width, int height); 
-void Celsius_Clear(Celsius_Renderer* renderer);
+Celsius_Renderer* Celsius_createRenderer(SDL_Window* window, Celsius_Camera* camera, int width, int height); 
 float Celsius_isIntersectingTriangle(Celsius_Renderer* renderer, vec3* vertices, int X, int Y);
-void Surface_drawPixel(SDL_Surface* surface, ivec2 A);
+void Celsius_swapBuffer(Celsius_Renderer* renderer);
+void Celsius_drawPixel(Celsius_Renderer* renderer, ivec2 A, float whiteBalance);
 u32* Surface_getPixel(SDL_Surface* surface, ivec2 A);
 void printVector(vec3 vector);
 void Celsius_clear(Celsius_Renderer* renderer);
+void Celsius_tracePixels(Celsius_Renderer * renderer, vec3 * vertices);
+void Celsius_updateSurface(Celsius_Renderer* renderer);
+

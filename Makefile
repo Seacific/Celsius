@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Celsius
+
+# Build rule for target.
+Celsius: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Celsius
+.PHONY : Celsius
+
+# fast build rule for target.
+Celsius/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Celsius.dir/build.make CMakeFiles/Celsius.dir/build
+.PHONY : Celsius/fast
+
+#=============================================================================
 # Target rules for targets named SDLRaycaster
 
 # Build rule for target.
@@ -128,6 +141,78 @@ SDLRaycaster: cmake_check_build_system
 SDLRaycaster/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDLRaycaster.dir/build.make CMakeFiles/SDLRaycaster.dir/build
 .PHONY : SDLRaycaster/fast
+
+src/celsius/camera.o: src/celsius/camera.c.o
+.PHONY : src/celsius/camera.o
+
+# target to build an object file
+src/celsius/camera.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Celsius.dir/build.make CMakeFiles/Celsius.dir/src/celsius/camera.c.o
+.PHONY : src/celsius/camera.c.o
+
+src/celsius/camera.i: src/celsius/camera.c.i
+.PHONY : src/celsius/camera.i
+
+# target to preprocess a source file
+src/celsius/camera.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Celsius.dir/build.make CMakeFiles/Celsius.dir/src/celsius/camera.c.i
+.PHONY : src/celsius/camera.c.i
+
+src/celsius/camera.s: src/celsius/camera.c.s
+.PHONY : src/celsius/camera.s
+
+# target to generate assembly for a file
+src/celsius/camera.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Celsius.dir/build.make CMakeFiles/Celsius.dir/src/celsius/camera.c.s
+.PHONY : src/celsius/camera.c.s
+
+src/celsius/math.o: src/celsius/math.c.o
+.PHONY : src/celsius/math.o
+
+# target to build an object file
+src/celsius/math.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Celsius.dir/build.make CMakeFiles/Celsius.dir/src/celsius/math.c.o
+.PHONY : src/celsius/math.c.o
+
+src/celsius/math.i: src/celsius/math.c.i
+.PHONY : src/celsius/math.i
+
+# target to preprocess a source file
+src/celsius/math.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Celsius.dir/build.make CMakeFiles/Celsius.dir/src/celsius/math.c.i
+.PHONY : src/celsius/math.c.i
+
+src/celsius/math.s: src/celsius/math.c.s
+.PHONY : src/celsius/math.s
+
+# target to generate assembly for a file
+src/celsius/math.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Celsius.dir/build.make CMakeFiles/Celsius.dir/src/celsius/math.c.s
+.PHONY : src/celsius/math.c.s
+
+src/celsius/renderer.o: src/celsius/renderer.c.o
+.PHONY : src/celsius/renderer.o
+
+# target to build an object file
+src/celsius/renderer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Celsius.dir/build.make CMakeFiles/Celsius.dir/src/celsius/renderer.c.o
+.PHONY : src/celsius/renderer.c.o
+
+src/celsius/renderer.i: src/celsius/renderer.c.i
+.PHONY : src/celsius/renderer.i
+
+# target to preprocess a source file
+src/celsius/renderer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Celsius.dir/build.make CMakeFiles/Celsius.dir/src/celsius/renderer.c.i
+.PHONY : src/celsius/renderer.c.i
+
+src/celsius/renderer.s: src/celsius/renderer.c.s
+.PHONY : src/celsius/renderer.s
+
+# target to generate assembly for a file
+src/celsius/renderer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Celsius.dir/build.make CMakeFiles/Celsius.dir/src/celsius/renderer.c.s
+.PHONY : src/celsius/renderer.c.s
 
 src/main.o: src/main.c.o
 .PHONY : src/main.o
@@ -153,57 +238,6 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDLRaycaster.dir/build.make CMakeFiles/SDLRaycaster.dir/src/main.c.s
 .PHONY : src/main.c.s
 
-<<<<<<< Updated upstream
-=======
-src/renderer/camera.o: src/renderer/camera.c.o
-.PHONY : src/renderer/camera.o
-
-# target to build an object file
-src/renderer/camera.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDLRaycaster.dir/build.make CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.o
-.PHONY : src/renderer/camera.c.o
-
-src/renderer/camera.i: src/renderer/camera.c.i
-.PHONY : src/renderer/camera.i
-
-# target to preprocess a source file
-src/renderer/camera.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDLRaycaster.dir/build.make CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.i
-.PHONY : src/renderer/camera.c.i
-
-src/renderer/camera.s: src/renderer/camera.c.s
-.PHONY : src/renderer/camera.s
-
-# target to generate assembly for a file
-src/renderer/camera.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDLRaycaster.dir/build.make CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.s
-.PHONY : src/renderer/camera.c.s
-
-src/renderer/renderer.o: src/renderer/renderer.c.o
-.PHONY : src/renderer/renderer.o
-
-# target to build an object file
-src/renderer/renderer.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDLRaycaster.dir/build.make CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.o
-.PHONY : src/renderer/renderer.c.o
-
-src/renderer/renderer.i: src/renderer/renderer.c.i
-.PHONY : src/renderer/renderer.i
-
-# target to preprocess a source file
-src/renderer/renderer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDLRaycaster.dir/build.make CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.i
-.PHONY : src/renderer/renderer.c.i
-
-src/renderer/renderer.s: src/renderer/renderer.c.s
-.PHONY : src/renderer/renderer.s
-
-# target to generate assembly for a file
-src/renderer/renderer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDLRaycaster.dir/build.make CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.s
-.PHONY : src/renderer/renderer.c.s
-
->>>>>>> Stashed changes
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -212,19 +246,20 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... Celsius"
 	@echo "... SDLRaycaster"
+	@echo "... src/celsius/camera.o"
+	@echo "... src/celsius/camera.i"
+	@echo "... src/celsius/camera.s"
+	@echo "... src/celsius/math.o"
+	@echo "... src/celsius/math.i"
+	@echo "... src/celsius/math.s"
+	@echo "... src/celsius/renderer.o"
+	@echo "... src/celsius/renderer.i"
+	@echo "... src/celsius/renderer.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-<<<<<<< Updated upstream
-=======
-	@echo "... src/renderer/camera.o"
-	@echo "... src/renderer/camera.i"
-	@echo "... src/renderer/camera.s"
-	@echo "... src/renderer/renderer.o"
-	@echo "... src/renderer/renderer.i"
-	@echo "... src/renderer/renderer.s"
->>>>>>> Stashed changes
 .PHONY : help
 
 

@@ -9,11 +9,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/sea/dev/SDLRaycaster/src/main.c" "CMakeFiles/SDLRaycaster.dir/src/main.c.o" "gcc" "CMakeFiles/SDLRaycaster.dir/src/main.c.o.d"
-<<<<<<< Updated upstream
-=======
-  "/Users/sea/dev/SDLRaycaster/src/renderer/camera.c" "CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.o" "gcc" "CMakeFiles/SDLRaycaster.dir/src/renderer/camera.c.o.d"
-  "/Users/sea/dev/SDLRaycaster/src/renderer/renderer.c" "CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.o" "gcc" "CMakeFiles/SDLRaycaster.dir/src/renderer/renderer.c.o.d"
->>>>>>> Stashed changes
   )
 
 # Targets to which this target links which contain Fortran sources.
