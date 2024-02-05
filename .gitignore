@@ -2,7 +2,6 @@
 *.dSYM
 .DS_Store
 .DS_Store?
-/Dependencies
 ._*
 .Spotlight-V100
 .Trashes
