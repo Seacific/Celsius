@@ -247,5 +247,7 @@ CMakeFiles/SDLRaycaster.dir/src/main.c.o: \
   /Users/sea/dev/SDLRaycaster/Dependencies/include/cglm/bezier.h \
   /Users/sea/dev/SDLRaycaster/Dependencies/include/cglm/ray.h \
   /Users/sea/dev/SDLRaycaster/Dependencies/include/cglm/affine2d.h \
-  /Users/sea/dev/SDLRaycaster/src/celsius.h \
-  /Users/sea/dev/SDLRaycaster/src/camera.h
+  /Users/sea/dev/SDLRaycaster/src/celsius/include/celsius.h \
+  /Users/sea/dev/SDLRaycaster/src/celsius/include/camera.h \
+  /Users/sea/dev/SDLRaycaster/src/celsius/include/renderer.h \
+  /Users/sea/dev/SDLRaycaster/src/celsius/include/math.h

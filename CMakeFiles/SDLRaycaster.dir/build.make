@@ -92,6 +92,7 @@ SDLRaycaster_EXTERNAL_OBJECTS =
 
 SDLRaycaster: CMakeFiles/SDLRaycaster.dir/src/main.c.o
 SDLRaycaster: CMakeFiles/SDLRaycaster.dir/build.make
+SDLRaycaster: libCelsius.a
 SDLRaycaster: /opt/homebrew/Cellar/sdl2/2.28.5/lib/libSDL2.dylib
 SDLRaycaster: /opt/homebrew/Cellar/sdl2/2.28.5/lib/libSDL2.a
 SDLRaycaster: CMakeFiles/SDLRaycaster.dir/link.txt

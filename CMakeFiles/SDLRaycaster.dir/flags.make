@@ -6,7 +6,7 @@ C_DEFINES =
 
 C_INCLUDES = -I/Users/sea/dev/SDLRaycaster/include -I/Users/sea/dev/SDLRaycaster/Dependencies/include -I/Users/sea/dev/SDLRaycaster/src -isystem /opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2
 
-C_FLAGSarm64 =  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+C_FLAGSarm64 =  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -g -O0
 
-C_FLAGS =  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+C_FLAGS =  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -g -O0
 

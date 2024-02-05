@@ -72,13 +72,13 @@ float Celsius_isIntersectingTriangle(Celsius_Renderer* renderer, vec3* vertices,
    }
 
 
-   return clamp((invsqrt((glm_vec3_distance(Q, renderer->camera->position)/10))), 0, 255);
+   return clamp(255 * (5 / glm_vec3_distance(Q, renderer->camera->position)), 0, 200)+55;
 }
 
 void Celsius_drawPixel(Celsius_Renderer* renderer, ivec2 A, float whiteBalance) {
-		((u8*)renderer->buffer)[(A[0]+ renderer->width*A[1])*4] = (u8)whiteBalance;
-		((u8*)renderer->buffer)[(A[0]+ renderer->width*A[1])*4 + 1] = (u8)whiteBalance;
-		((u8*)renderer->buffer)[(A[0]+ renderer->width*A[1])*4 + 2] = (u8)whiteBalance;
+		((u8*)renderer->buffer)[(A[0]+ renderer->width*A[1])*4] = (u8)(whiteBalance);
+		((u8*)renderer->buffer)[(A[0]+ renderer->width*A[1])*4 + 1] = (u8)(whiteBalance);
+		((u8*)renderer->buffer)[(A[0]+ renderer->width*A[1])*4 + 2] = (u8)(whiteBalance);
 }
 
 u32* Surface_getPixel(SDL_Surface* surface, ivec2 A) {
