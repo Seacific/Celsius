@@ -10,6 +10,8 @@ add_library(
   src/celsius/camera.c
   src/celsius/renderer.c
   src/celsius/math.c
+  src/celsius/window.c
+  src/celsius/celsius.c
   )
 
 add_executable(
