@@ -4,7 +4,7 @@
 #include "include/camera.h"
 #include "include/math.h"
 
-Celsius_Renderer* Celsius_createRenderer(SDL_Window* window, Celsius_Camera* camera, int width, int height) {
+Celsius_Renderer* Celsius_CreateRenderer(SDL_Window* window, Celsius_Camera* camera, int width, int height) {
   Celsius_Renderer* renderer = malloc(sizeof(Celsius_Renderer));
   renderer->surface = SDL_GetWindowSurface(window);
   renderer->camera = camera; 
@@ -18,17 +18,18 @@ Celsius_Renderer* Celsius_createRenderer(SDL_Window* window, Celsius_Camera* cam
   return renderer;
 }
 
+
 void Celsius_Clear(Celsius_Renderer* renderer) {
     memset(renderer->surface->pixels, 0, (renderer->width)*(renderer->height)*sizeof(u32)); 
 }
 
-void Celsius_swapBuffer(Celsius_Renderer* renderer) {
+void Celsius_SwapBuffer(Celsius_Renderer* renderer) {
   u32* temp = renderer->surface->pixels;
   renderer->surface->pixels = renderer->buffer;
   renderer->buffer = temp;
 }
 
-float Celsius_isIntersectingTriangle(Celsius_Renderer* renderer, vec3* vertices, int X, int Y) {
+float Celsius_IsIntersectingTriangle(Celsius_Renderer* renderer, vec3* vertices, int X, int Y) {
    vec3 AB, AC, BC, CA, n, cross;
 
    glm_vec3_sub(vertices[1], vertices[0], AB);
@@ -75,13 +76,13 @@ float Celsius_isIntersectingTriangle(Celsius_Renderer* renderer, vec3* vertices,
    return clamp(255 * (5 / glm_vec3_distance(Q, renderer->camera->position)), 0, 200)+55;
 }
 
-void Celsius_drawPixel(Celsius_Renderer* renderer, ivec2 A, float whiteBalance) {
+void Celsius_DrawPixel(Celsius_Renderer* renderer, ivec2 A, float whiteBalance) {
 		((u8*)renderer->buffer)[(A[0]+ renderer->width*A[1])*4] = (u8)(whiteBalance);
 		((u8*)renderer->buffer)[(A[0]+ renderer->width*A[1])*4 + 1] = (u8)(whiteBalance);
 		((u8*)renderer->buffer)[(A[0]+ renderer->width*A[1])*4 + 2] = (u8)(whiteBalance);
 }
 
-u32* Surface_getPixel(SDL_Surface* surface, ivec2 A) {
+u32* Surface_GetPixel(SDL_Surface* surface, ivec2 A) {
     return ((u32*)surface->pixels + (A[0]+surface->w*A[1]));
 }
 
@@ -91,10 +92,10 @@ void printVector(vec3 vector) {
     }
 }
 
-void Celsius_tracePixels(Celsius_Renderer * renderer, vec3 * vertices) {
+void Celsius_TracePixels(Celsius_Renderer * renderer, vec3 * vertices) {
 	for (int X = 0; X < renderer->width; X++) {
 		for (int Y = 0; Y < renderer->height; Y++) {
-			Celsius_drawPixel(renderer, (ivec2) {X, Y}, Celsius_isIntersectingTriangle(renderer, vertices, X, Y));
+			Celsius_DrawPixel(renderer, (ivec2) {X, Y}, Celsius_IsIntersectingTriangle(renderer, vertices, X, Y));
 		}
 	}
 }
